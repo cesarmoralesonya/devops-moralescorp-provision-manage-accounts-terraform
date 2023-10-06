@@ -16,3 +16,8 @@ module "aft" {
   global_customizations_repo_name               = "${var.github_username}/learn-terraform-aft-global-customizations"
   account_customizations_repo_name              = "${var.github_username}/learn-terraform-aft-account-customizations"
 }
+
+provider "aws" {
+  region = var.ct_home_region
+  profile = var.profile
+}
